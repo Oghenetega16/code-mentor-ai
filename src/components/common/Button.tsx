@@ -20,8 +20,8 @@ export const Button: React.FC<ButtonProps> = ({
     const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
     
     const variantClasses = {
-        primary: 'bg-primary-500 hover:bg-primary-600 text-white focus:ring-primary-500',
-        secondary: 'bg-gray-200 hover:bg-gray-300 text-gray-800 focus:ring-gray-500',
+        primary: 'bg-cyan-950 hover:bg-primary-600 text-white focus:ring-primary-500',
+        secondary: 'bg-gray-800 hover:bg-gray-600 text-gray-200 focus:ring-gray-500',
         outline: 'border border-gray-300 bg-white hover:bg-gray-50 text-gray-700 focus:ring-primary-500',
         ghost: 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:ring-gray-500'
     };

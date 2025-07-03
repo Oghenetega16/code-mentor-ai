@@ -4,7 +4,7 @@ import { Code, Github, Twitter, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-gray-900 text-white">
+        <footer className="bg-gray-900 text-white font-montserrat">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
@@ -35,11 +35,24 @@ const Footer: React.FC = () => {
                     <div>
                         <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Product</h3>
                         <ul className="space-y-2">
-                            <li><Link to="/features" className="text-gray-400 hover:text-white text-sm transition-colors">Features</Link></li>
-                            <li><Link to="/pricing" className="text-gray-400 hover:text-white text-sm transition-colors">Pricing</Link></li>
-                            <li><Link to="/about" className="text-gray-400 hover:text-white text-sm transition-colors">About</Link></li>
+                            <li>
+                                <Link to="/about" className="text-gray-400 hover:text-white text-sm transition-colors">About</Link>
+                            </li>
+                            <li>
+                                <Link to="/features" className="text-gray-400 hover:text-white text-sm transition-colors">Features</Link>
+                            </li>
+                            <li>
+                                <Link to="/mentorship" className="text-gray-400 hover:text-white text-sm transition-colors">Mentorship</Link>
+                            </li>
+                            <li>
+                                <Link to="/community" className="text-gray-400 hover:text-white text-sm transition-colors">Community</Link>
+                            </li>
+                            <li>
+                                <Link to="/learning" className="text-gray-400 hover:text-white text-sm transition-colors">Learning</Link>
+                            </li>
                         </ul>
                     </div>
+
 
                     {/* Support */}
                     <div>
