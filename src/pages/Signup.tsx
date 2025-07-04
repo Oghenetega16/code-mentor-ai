@@ -93,8 +93,7 @@ export default function SignupPage({ onBack }: { onBack?: () => void }) {
             });
 
         // 3. Send verification email
-        await sendEmailVerification(user);
-
+        await sendEmailVerification(userCredential.user);
             alert("Verification email sent. Please check your inbox.");
             navigate("/login");
         } catch (error: unknown) {
