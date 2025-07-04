@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Brain, Eye, EyeOff, Mail, Lock } from "lucide-react";
+import { Link } from 'react-router-dom'
 
 export default function SignupPage({ onBack }: { onBack?: () => void }) {
     const [formData, setFormData] = useState({
@@ -61,9 +62,9 @@ export default function SignupPage({ onBack }: { onBack?: () => void }) {
         message ? <p className="mt-1 text-xs text-red-500">{message}</p> : null;
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4 font-montserrat">
             <div className="max-w-md w-full">
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-2xl">
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-2xl my-10">
                     <div className="text-center mb-8">
                         <div className="flex items-center justify-center mb-4">
                             <div className="p-2 bg-purple-600 rounded-xl mr-3">
@@ -192,7 +193,7 @@ export default function SignupPage({ onBack }: { onBack?: () => void }) {
                         Create Account
                         </button>
 
-                        <p className="text-center text-gray-300 mt-6">
+                        <Link to="/login" className="text-center text-gray-300 mt-6">
                             Already have an account?{" "}
                             <button
                                 type="button"
@@ -201,7 +202,7 @@ export default function SignupPage({ onBack }: { onBack?: () => void }) {
                             >
                                 Sign in
                             </button>
-                        </p>
+                        </Link>
                     </form>
 
                     {onBack && (

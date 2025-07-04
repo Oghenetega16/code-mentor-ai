@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Github, Brain, Eye, EyeOff, Mail, Lock } from 'lucide-react';
+import { Link } from 'react-router-dom'
 
 export default function Login() {
 
-    const [currentView, setCurrentView] = useState('landing');
     const [showPassword, setShowPassword] = useState(false);
     const [formData, setFormData] = useState({
         email: '',
@@ -13,22 +13,22 @@ export default function Login() {
         username: ''
     });
 
-    const handleInputChange = (e) => {
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value
         }));
     };
-    
-    const handleSubmit = (e) => {
+
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         console.log('Form submitted:', formData);
     };
 
     return(
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4 font-montserrat">
             <div className="max-w-md w-full">
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-2xl">
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-2xl my-10">
                     <div className="text-center mb-8">
                         <div className="flex items-center justify-center mb-4">
                             <div className="p-2 bg-purple-600 rounded-xl mr-3"><Brain className="w-6 h-6 text-white" /></div>
@@ -96,29 +96,27 @@ export default function Login() {
 
                         <button
                             type="button"
-                            className="w-full py-3 bg-gray-800 text-white rounded-xl font-semibold hover:bg-gray-700 transition-colors flex items-center justify-center"
+                            className="w-full py-3 mb-5 bg-gray-800 text-white rounded-xl font-semibold hover:bg-gray-700 transition-colors flex items-center justify-center"
                         >
                             <Github className="w-5 h-5 mr-2" />
                             Sign in with GitHub
                         </button>
                     </div>
 
-                    <p className="text-center text-gray-300 mt-6">
+                    <Link to="/signup" className="text-center text-gray-300 mt-6">
                         Don't have an account?{' '}
                         <button 
-                            onClick={() => setCurrentView('signup')}
                             className="text-purple-400 hover:text-purple-300 font-semibold"
                         >
                             Sign up
                         </button>
-                    </p>
+                    </Link>
 
-                    <button 
-                        onClick={() => setCurrentView('landing')}
-                        className="mt-4 text-sm text-gray-400 hover:text-white transition-colors"
+                    <Link to="/" 
+                        className="flex mt-4 text-sm text-gray-400 hover:text-white transition-colors"
                     >
                         ← Back to home
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>
