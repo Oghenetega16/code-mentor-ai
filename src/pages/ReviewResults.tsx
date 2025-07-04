@@ -1,7 +1,7 @@
-export default function ReviewResults() {
+export default function RevieResults() {
     return (
         <>
-            <h1>Review Result Page</h1>
+            <h1>Review Result</h1>
         </>
     )
 }

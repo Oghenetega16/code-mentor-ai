@@ -1,7 +1,8 @@
-export default function SubmitCode() {
+
+export default function SubmitPage() {
     return (
         <>
-            <h1>Submit Code Page</h1>
+            <h1>Submit</h1>
         </>
     )
 }

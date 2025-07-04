@@ -6,7 +6,7 @@ import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import LoadingSpinner from './components/common/LoadingSpinner';
 import ScrollToTop from './components/common/ScrollToTop';
-import OtpVerification from './pages/OTPVerification';
+import ForgotPassword from './pages/ForgotPassword';
 
 // Lazy-loaded pages
 const Home = lazy(() => import('./pages/Home'));
@@ -35,7 +35,7 @@ export default function App() {
                                 <Route path="/" element={<Home />} />
                                 <Route path="/login" element={<Login />} />
                                 <Route path="/signup" element={<Signup />} />
-                                <Route path="/otpverification" element={<OtpVerification />} />
+                                <Route path="/forgotpassword" element={<ForgotPassword />} />
 
                                 {/* Protected Routes */}
                                 <Route path="/dashboard" element={
